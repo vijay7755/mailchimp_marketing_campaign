@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Email Campaign</title>
+</head>
+
+<body>
+  <!-- I have created a form here only to get the arguments required for creating campaign -->
+  <!-- You can create your own form for all other API methods -->
+  
+    <div class="container">
+        <section class="row m-0 text-center">
+          <div class="col-md-6 m-auto">
+            <h1><i class="fas fa-newspaper fa-2x"></i></h1>
+            <h1 class="display-4 text-success">Create and Send Campaign</h1>
+            <p class="lead">
+              Provide the details to create and send campaign
+            </p>
+            <form action="/campaign" method="POST">
+              <div class="form-group my-2">
+                <input type="text" name="templateName" id="template" class="form-control" placeholder="Template name" required />
+              </div>
+              <div class="form-group my-2">
+                <input type="text" name="subjectLine" id="subject-line" class="form-control" placeholder="Subject Line" required/>
+              </div>
+              <div class="form-group my-2">
+                <input type="text" name="previewText" id="preview-text" class="form-control" placeholder="Preview Text" required />
+              </div>
+              <div class="form-group my-2">
+                <input type="text" name="campaignTitle" id="campaign-title" class="form-control" placeholder="Campaign Title" required />
+              </div>
+              <div class="form-group my-2">
+                <input type="text" name="fromName" id="from-name" class="form-control" placeholder="From Name" required />
+              </div>
+              <div class="form-group my-2">
+                <input type="email" name="replyTo" id="reply-to" class="form-control" placeholder="Reply To" required />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block my-2">
+                Create and Send
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
+</body>
+
+</html>
